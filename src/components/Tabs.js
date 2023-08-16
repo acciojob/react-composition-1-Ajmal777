@@ -10,7 +10,7 @@ const Tabs = () =>{
             <li onClick={()=>setCurrentTab('Tab 3')}>Tab 3</li>
             {currentTab && 
                 <p>This is the content for {currentTab}.</p>
-            }
+            } 
         </div>
     )
 }
