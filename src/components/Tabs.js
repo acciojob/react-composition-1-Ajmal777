@@ -1,15 +1,17 @@
 import React , {useState} from "react";
 
 const Tabs = () =>{
-    const [currentTab, setCurrentTab] = useState('');
+    const [currentTab, setCurrentTab] = useState('Tab 1');
 
     return (
         <div className="tabs">
-            <li onClick={()=>setCurrentTab('This is the content for Tab 1.')}>Tab 1</li>
-            <li onClick={()=>setCurrentTab('This is the content for Tab 2.')}>Tab 2</li>
-            <li onClick={()=>setCurrentTab('This is the content for Tab 3.')}>Tab 3</li>
+            <ul>
+                <li onClick={()=>setCurrentTab('Tab 1')}>Tab 1</li>
+                <li onClick={()=>setCurrentTab('Tab 2')}>Tab 2</li>
+                <li onClick={()=>setCurrentTab('Tab 3')}>Tab 3</li>
+            </ul>
             {currentTab && 
-                <p>{currentTab}</p>
+                <p>This is the content for {currentTab}.</p>
             } 
         </div>
     )
